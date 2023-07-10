@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:untitled3/second page.dart';
+import 'package:untitled3/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:Quiz(),
+      home:Login_Page( ),
     );
   }
 }
@@ -42,7 +43,7 @@ class Quiz extends StatelessWidget {
         backgroundColor: HexColor("3FC2BF"),
       ),
       body: (
-      Center(child: Column(
+      Center(child: Column(mainAxisAlignment:MainAxisAlignment.center ,
         children: [
           Padding(padding:EdgeInsets.all(40),
             child: Text("Welcome",style:
@@ -53,40 +54,45 @@ class Quiz extends StatelessWidget {
             ),
             ),
           ),
-       Stack(children: [ Container(
-         height: 200,
-         width: 400,
-       ),
-         Positioned(top:60,
-         right: 57,
-         child:
-         ClipRRect(borderRadius: BorderRadius.circular(25),
-       child:Container(
-         width: 300,
-         height: 100,
-         color: Colors.white,
-         child: Padding(padding:EdgeInsets.fromLTRB(95.0, 70.0, 0.0, 0.0),
-           child: Text("Sahil Panwar",
-             style:TextStyle(
-               fontWeight: FontWeight.normal,
-               color: HexColor("#3A3E3F"),
-               fontSize: 20,
-             )
-             ,),
-         ),
-       ), ),),
-         Positioned(bottom: 80.0,
-           right: 150.0,
-           child:
-         Container(
-           child:
-           CircleAvatar(
-             radius:60,
-             backgroundImage:AssetImage("assets/Frame 122.jpg"),
+       Row(mainAxisAlignment:MainAxisAlignment.center ,
+         children: [
+           Stack(children: [ Container(
+             height: 200,
+             width: 300,
            ),
-         ),
-         )
-       ]
+             Positioned(top:60,
+             right: 15,
+             left: 15,
+             child:
+             ClipRRect(borderRadius: BorderRadius.circular(25),
+           child:Container(
+             width: 300,
+             height: 100,
+             color: Colors.white,
+             child: Padding(padding:EdgeInsets.fromLTRB(70.0, 70.0, 0.0, 0.0),
+               child: Text("Sahil Panwar",
+                 style:TextStyle(
+                   fontWeight: FontWeight.normal,
+                   color: HexColor("#3A3E3F"),
+                   fontSize: 20,
+                 )
+                 ,),
+             ),
+           ), ),),
+             Positioned(bottom: 80.0,
+               right: 90.0,
+               child:
+             Container(
+               child:
+               CircleAvatar(
+                 radius:60,
+                 backgroundImage:AssetImage("assets/Frame 122.jpg"),
+               ),
+             ),
+             )
+           ]
+           ),
+         ],
        ),
           Stack(children: [
             Container(
@@ -117,7 +123,7 @@ class Quiz extends StatelessWidget {
                             Color(0xffB854E8)
                           ],)
                     ),
-                    child: 
+                    child:
                     Text("Start",style:
                     TextStyle(
                       color: Colors.white,
